@@ -390,7 +390,10 @@ body {
   border-radius: 6px;
 }
 
-.dropdown-menu a:hover {
+.dropdown-menu a:hover .arrow {
+  position: relative;
+  top: 1px;
+}{
   background: #1a2030;
   color: var(--text-primary);
 }
