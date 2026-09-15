@@ -43,14 +43,8 @@
     <p>Un nouveau fond d'écran chaque jour</p>
     <a href="https://whatsapp.com/channel/0029VbCLrYOJ3juwuvAiIg3p" class="btn-main">Rejoindre WhatsApp</a>
   </section>
-  <section class="theme-section">
-    <p class="theme-label">🔥 Le thème de la semaine</p>
-    <h2 class="theme-title">🐦 Oiseaux</h2>
-    <div class="theme-image-wrap">
-      <img src="https://images.unsplash.com/photo-1444464666168-49d633b86797?w=900" alt="Oiseaux en vol">
-      <p class="theme-caption">Des fonds d'écran exclusifs sur les oiseaux toute la semaine !</p>
-    </div>
-  </section>  <section class="kitsu-section">
+  <section class="theme-section" id="theme-section"></section>
+  <section class="kitsu-section">
     <div class="kitsu-text">
       <p class="kitsu-icon-title">🦊 Kitsu</p>
       <p class="kitsu-subtitle">La mascotte de Daily Wallpaper</p>
@@ -83,21 +77,37 @@
         <p>Duels, sondages, quiz et défis pour participer, pas juste regarder.</p>
       </div>
     </div>
-  </section>  <section class="duel-section">
+  </section>  <section class="duel-section" id="duel-section"></section>
+<script src="theme-data.js"></script>
+<script src="duel-data.js"></script>
+<script>
+  // Remplit la section "Thème de la semaine" à partir de theme-data.js
+  document.getElementById("theme-section").innerHTML = `
+    <p class="theme-label">🔥 Le thème de la semaine</p>
+    <h2 class="theme-title">${theme.emoji} ${theme.titre}</h2>
+    <div class="theme-image-wrap">
+      <img src="${theme.image}" alt="${theme.titre}">
+      <p class="theme-caption">${theme.legende}</p>
+    </div>
+  `;
+
+  // Remplit la section "Duel" à partir de duel-data.js
+  document.getElementById("duel-section").innerHTML = `
     <h2 class="duel-title">⚔️ Le Duel de la semaine</h2>
     <p class="duel-subtitle">Votez pour votre wallpaper préféré !</p>
     <div class="duel-versus">
       <div class="duel-option">
-        <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=500" alt="Montagnes">
-        <div class="duel-label">Montagnes</div>
+        <img src="${duel.option1.image}" alt="${duel.option1.nom}">
+        <div class="duel-label">${duel.option1.nom}</div>
       </div>
       <span class="duel-vs">VS</span>
       <div class="duel-option">
-        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500" alt="Océan">
-        <div class="duel-label">Océan</div>
+        <img src="${duel.option2.image}" alt="${duel.option2.nom}">
+        <div class="duel-label">${duel.option2.nom}</div>
       </div>
     </div>
-    <a href="https://whatsapp.com/channel/0029VbCLrYOJ3juwuvAiIg3p" class="duel-vote-btn">Voter maintenant</a>
-  </section>
+    <a href="${duel.lienVote}" class="duel-vote-btn">Voter maintenant</a>
+  `;
+</script>
 </body>
 </html>
