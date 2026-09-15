@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Daily Wallpaper</title>
+
+<style>
+  :root {
+    --bg: #0a0e14;
+    --bg-header: #0a0e14ee;
+    --card-bg: #131822;
+    --text-light: #ffffff;
+    --text-muted: #9aa4b2;
+    --accent: #F97316;
+    --accent-action: #22c55e;
+    --border: #1f2530;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text-light);
+    font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 40px;
+    background: var(--bg-header);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+
+  .logo { display: flex; align-items: center; gap: 10px; }
+  .logo-icon { width: 52px; height: 52px; border-radius: 50%; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+  .logo-icon img { width: 100%; height: 100%; object-fit: cover; }
+  .logo-text { line-height: 1.2; }
+  .logo-text .name { font-weight: 700; font-size: 17px; }
+  .logo-text .sub { font-size: 11px; color: var(--accent); letter-spacing: 0.5px; }
+
+  nav { display: flex; align-items: center; gap: 28px; }
+  nav a { color: var(--text-light); text-decoration: none; font-size: 14px; opacity: 0.85; }
+  nav a.active, nav a:hover { opacity: 1; color: var(--accent); }
+
+  .nav-dropdown { position: relative; padding-bottom: 14px; margin-bottom: -14px; }
+  .nav-dropdown > a { display: flex; align-items: center; gap: 4px; }
+  .dropdown-menu {
+    position: absolute; top: 100%; left: 0;
+    background: var(--card-bg); border: 1px solid var(--border);
+    border-radius: 10px; padding: 8px; min-width: 160px;
+    display: none; flex-direction: column; gap: 2px;
+  }
+  .nav-dropdown:hover .dropdown-menu { display: flex; }
+  .dropdown-menu a { color: var(--text-muted); text-decoration: none; font-size: 14px; padding: 8px 12px; border-radius: 6px; }
+  .dropdown-menu a:hover { background: #1a2030; color: var(--text-light); }
+  .arrow { position: relative; top: 1px; }
+
+  .cta-button {
+    background: var(--accent-action);
+    color: #06240f;
+    padding: 10px 20px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  /* --- Contenu principal : 2 colonnes --- */
+  .contact-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 70px 40px;
+    align-items: start;
+  }
+
+  .eyebrow {
+    color: var(--accent);
+    font-size: 13px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 18px;
+  }
+  .eyebrow::before { content: ""; width: 24px; height: 1px; background: var(--accent); display: inline-block; }
+
+  .contact-left h1 {
+    font-size: 40px;
+    line-height: 1.2;
+    margin: 0 0 20px;
+  }
+
+  .contact-left h1 .accent { color: var(--accent-action); }
+
+  .contact-left p {
+    color: var(--text-muted);
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 32px;
+  }
+
+  .perks {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .perk {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 18px;
+  }
+
+  .perk-icon {
+    width: 34px;
+    height: 34px;
+    background: var(--accent-action);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+
+  .perk h3 { font-size: 14px; margin: 0 0 6px; }
+  .perk p { font-size: 12.5px; color: var(--text-muted); margin: 0; line-height: 1.5; }
+
+  /* --- Formulaire --- */
+  .contact-form {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 30px;
+    text-align: center;
+  }
+
+  .form-icon {
+    width: 46px;
+    height: 46px;
+    background: var(--accent-action);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    margin: 0 auto 14px;
+  }
+
+  .contact-form h2 { font-size: 20px; margin: 0 0 4px; }
+  .form-note { color: var(--accent-action); font-size: 11px; font-weight: 700; letter-spacing: 0.5px; margin-bottom: 24px; }
+
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 16px; }
+  .form-group { text-align: left; }
+  .form-group label { display: block; font-size: 13px; margin-bottom: 6px; color: var(--text-muted); }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 12px;
+    color: var(--text-light);
+    font-size: 14px;
+    font-family: inherit;
+  }
+
+  .form-group textarea { resize: vertical; min-height: 100px; }
+
+  .form-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .btn-secondary {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text-light);
+    padding: 12px 20px;
+    border-radius: 999px;
+    font-size: 14px;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .btn-submit {
+    background: var(--accent-action);
+    color: #06240f;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .form-footer-note {
+    color: var(--text-muted);
+    font-size: 11.5px;
+    margin-top: 18px;
+    line-height: 1.5;
+  }
+
+  .form-success {
+    display: none;
+    color: var(--accent-action);
+    font-size: 14px;
+    margin-top: 16px;
+  }
+
+  @media (max-width: 900px) {
+    .contact-wrap { grid-template-columns: 1fr; }
+    .perks { grid-template-columns: 1fr; }
+    nav { display: none; }
+    header { padding: 14px 20px; }
+  }
+</style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <div class="logo-icon"><img src="images/logo.png" alt="Logo Daily Wallpaper"></div>
+      <div class="logo-text">
+        <div class="name">Daily Wallpaper</div>
+        <div class="sub">CANAL WHATSAPP</div>
+      </div>
+    </div>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="collections.html">Collections</a>
+      <a href="nouvelles.html">Nouvelles</a>
+      <div class="nav-dropdown">
+        <a href="#">Plus <span class="arrow">⌄</span></a>
+        <div class="dropdown-menu">
+          <a href="#">Culture</a>
+          <a href="#">Quiz</a>
+          <a href="contact.html">Message anonyme</a>
+        </div>
+      </div>
+      <a href="#">Connexion</a>
+      <a href="#">Discord</a>
+    </nav>
+    <a class="cta-button" href="https://whatsapp.com/channel/0029VbCLrYOJ3juwuvAiIg3p">Rejoindre la chaîne</a>
+  </header>
+
+  <div class="contact-wrap">
+    <div class="contact-left">
+      <div class="eyebrow">MESSAGE ANONYME</div>
+      <h1>Une idée, un bug ou une suggestion pour <span class="accent">Daily Wallpaper</span> ?</h1>
+      <p>Écrivez-nous librement. Votre message nous est transmis directement, sans compte obligatoire et avec pseudo ou e-mail facultatifs.</p>
+
+      <div class="perks">
+        <div class="perk">
+          <div class="perk-icon">🕵️</div>
+          <h3>Anonyme par défaut</h3>
+          <p>Laissez le pseudo et l'e-mail vides si vous ne voulez pas être identifié.</p>
+        </div>
+        <div class="perk">
+          <div class="perk-icon">💡</div>
+          <h3>Suggestions bienvenues</h3>
+          <p>Proposez une collection, un style ou une amélioration pour la chaîne.</p>
+        </div>
+        <div class="perk">
+          <div class="perk-icon">🛡️</div>
+          <h3>Simple et respectueux</h3>
+          <p>Aucun compte n'est demandé pour envoyer un retour rapide et utile.</p>
+        </div>
+      </div>
+    </div>
+
+    <form class="contact-form" id="contact-form">
+      <div class="form-icon">📩</div>
+      <h2>Envoyez votre message</h2>
+      <p class="form-note">RÉPONSE FACULTATIVE</p>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="pseudo">Pseudo facultatif</label>
+          <input type="text" id="pseudo" name="pseudo" placeholder="Ex. Fan de wallpapers">
+        </div>
+        <div class="form-group">
+          <label for="email">E-mail facultatif</label>
+          <input type="email" id="email" name="email" placeholder="Seulement si vous voulez une réponse">
+        </div>
+      </div>
+
+      <div class="form-group" style="margin-bottom:16px">
+        <label for="sujet">Sujet</label>
+        <select id="sujet" name="sujet">
+          <option>Suggestion de fond d'écran</option>
+          <option>Signaler un bug</option>
+          <option>Idée pour la chaîne</option>
+          <option>Autre</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Votre message</label>
+        <textarea id="message" name="message" placeholder="Écrivez votre message ici..." required></textarea>
+      </div>
+
+      <div class="form-actions">
+        <a href="index.html" class="btn-secondary">Retour à l'accueil</a>
+        <button type="submit" class="btn-submit">Envoyer le message</button>
+      </div>
+
+      <p class="form-success" id="form-success">Merci ! Votre message a bien été envoyé. 🎉</p>
+      <p class="form-footer-note">Les champs vides ne seront pas transmis. Ajoutez votre e-mail uniquement si vous souhaitez recevoir une réponse.</p>
+    </form>
+  </div>
+
+  <script>
+    const form = document.getElementById("contact-form");
+    const success = document.getElementById("form-success");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const data = new FormData(form);
+
+      fetch("https://formspree.io/f/mgaegjlo", {
+        method: "POST",
+        body: data,
+        headers: { "Accept": "application/json" }
+      }).then(response => {
+        if (response.ok) {
+          form.reset();
+          success.style.display = "block";
+        } else {
+          alert("Une erreur est survenue, réessaie dans un instant.");
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
