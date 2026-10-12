@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Donne ton avis — Daily Wallpaper</title>
+
+<style>
+  :root {
+    --bg: #0a0e14;
+    --bg-header: #0a0e14ee;
+    --card-bg: #131822;
+    --text-light: #ffffff;
+    --text-muted: #9aa4b2;
+    --accent: #F97316;
+    --accent-action: #22c55e;
+    --border: #1f2530;
+    --star: #FACC15;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text-light);
+    font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 40px;
+    background: var(--bg-header);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+
+  .logo { display: flex; align-items: center; gap: 10px; }
+  .logo-icon { width: 52px; height: 52px; border-radius: 50%; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+  .logo-icon img { width: 100%; height: 100%; object-fit: cover; }
+  .logo-text { line-height: 1.2; }
+  .logo-text .name { font-weight: 700; font-size: 17px; }
+  .logo-text .sub { font-size: 11px; color: var(--accent); letter-spacing: 0.5px; }
+
+  nav { display: flex; align-items: center; gap: 28px; }
+  nav a { color: var(--text-light); text-decoration: none; font-size: 14px; opacity: 0.85; }
+  nav a.active, nav a:hover { opacity: 1; color: var(--accent); }
+
+  .nav-dropdown { position: relative; padding-bottom: 14px; margin-bottom: -14px; }
+  .nav-dropdown > a { display: flex; align-items: center; gap: 4px; }
+  .dropdown-menu {
+    position: absolute; top: 100%; left: 0;
+    background: var(--card-bg); border: 1px solid var(--border);
+    border-radius: 10px; padding: 8px; min-width: 160px;
+    display: none; flex-direction: column; gap: 2px;
+  }
+  .nav-dropdown:hover .dropdown-menu { display: flex; }
+  .dropdown-menu a { color: var(--text-muted); text-decoration: none; font-size: 14px; padding: 8px 12px; border-radius: 6px; white-space: nowrap; }
+  .dropdown-menu a:hover { background: #1a2030; color: var(--text-light); }
+  .arrow { position: relative; top: 1px; }
+
+  .cta-button {
+    background: var(--accent-action);
+    color: #06240f;
+    padding: 10px 20px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  /* --- Contenu principal : 2 colonnes --- */
+  .avis-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 70px 40px;
+    align-items: start;
+  }
+
+  .eyebrow {
+    color: var(--accent);
+    font-size: 13px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 18px;
+  }
+  .eyebrow::before { content: ""; width: 24px; height: 1px; background: var(--accent); display: inline-block; }
+
+  .avis-left h1 { font-size: 40px; line-height: 1.2; margin: 0 0 20px; }
+  .avis-left h1 .accent { color: var(--accent-action); }
+  .avis-left p { color: var(--text-muted); font-size: 15px; line-height: 1.6; margin-bottom: 32px; }
+
+  .perks { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .perk { background: var(--card-bg); border: 1px solid var(--border); border-radius: 14px; padding: 18px; }
+  .perk-icon {
+    width: 34px; height: 34px;
+    background: var(--accent-action);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 15px; margin-bottom: 10px;
+  }
+  .perk h3 { font-size: 14px; margin: 0 0 6px; }
+  .perk p { font-size: 12.5px; color: var(--text-muted); margin: 0; line-height: 1.5; }
+
+  /* --- Formulaire --- */
+  .avis-form {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 30px;
+    text-align: center;
+  }
+
+  .form-icon {
+    width: 46px; height: 46px;
+    background: #3a3410;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px;
+    margin: 0 auto 14px;
+  }
+
+  .avis-form h2 { font-size: 20px; margin: 0 0 4px; }
+  .form-note { color: var(--accent-action); font-size: 11px; font-weight: 700; letter-spacing: 0.5px; margin-bottom: 20px; }
+
+  /* --- Étoiles --- */
+  .stars {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 26px;
+  }
+
+  .star-btn {
+    width: 44px;
+    height: 44px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    font-size: 24px;
+    color: #3d4658;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0;
+    transition: color 0.15s, transform 0.15s;
+  }
+
+  .star-btn.filled { color: var(--star); }
+  .star-btn:hover { transform: scale(1.08); }
+
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 16px; }
+  .form-group { text-align: left; }
+  .form-group label { display: block; font-size: 13px; margin-bottom: 6px; color: var(--text-muted); }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 12px;
+    color: var(--text-light);
+    font-size: 14px;
+    font-family: inherit;
+  }
+
+  .form-group textarea { resize: vertical; min-height: 100px; }
+
+  .form-actions { display: flex; justify-content: space-between; align-items: center; margin-top: 20px; }
+
+  .btn-secondary {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text-light);
+    padding: 12px 20px;
+    border-radius: 999px;
+    font-size: 14px;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .btn-submit {
+    background: var(--accent-action);
+    color: #06240f;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .form-message { display: none; font-size: 14px; margin-top: 16px; }
+  .form-message.success { color: var(--accent-action); }
+  .form-message.error { color: #f87171; }
+
+  .form-footer-note { color: var(--text-muted); font-size: 11.5px; margin-top: 18px; line-height: 1.5; }
+
+  @media (max-width: 900px) {
+    .avis-wrap { grid-template-columns: 1fr; }
+    .perks { grid-template-columns: 1fr; }
+    nav { display: none; }
+    header { padding: 14px 20px; }
+  }
+</style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <div class="logo-icon"><img src="images/logo.png" alt="Logo Daily Wallpaper"></div>
+      <div class="logo-text">
+        <div class="name">Daily Wallpaper</div>
+        <div class="sub">CANAL WHATSAPP</div>
+      </div>
+    </div>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="collections.html">Collections</a>
+      <a href="nouvelles.html">Nouvelles</a>
+      <div class="nav-dropdown">
+        <a href="#">Plus <span class="arrow">⌄</span></a>
+        <div class="dropdown-menu">
+          <a href="#">Culture</a>
+          <a href="#">Quiz</a>
+          <a href="avis.html">Donne ton avis</a>
+          <a href="contact.html">Message anonyme</a>
+        </div>
+      </div>
+      <a href="#">Connexion</a>
+      <a href="#">Discord</a>
+    </nav>
+    <a class="cta-button" href="https://whatsapp.com/channel/0029VbCLrYOJ3juwuvAiIg3p">Rejoindre la chaîne</a>
+  </header>
+
+  <div class="avis-wrap">
+    <div class="avis-left">
+      <div class="eyebrow">DONNE TON AVIS</div>
+      <h1>Combien d'étoiles mérite <span class="accent">Daily Wallpaper</span> ?</h1>
+      <p>Ton retour nous aide à choisir de meilleurs fonds d'écran, à améliorer les thèmes proposés et à garder une expérience simple, gratuite et agréable.</p>
+
+      <div class="perks">
+        <div class="perk">
+          <div class="perk-icon">🖼️</div>
+          <h3>Sélections plus précises</h3>
+          <p>Dis-nous quels styles te plaisent le plus pour orienter les prochaines collections.</p>
+        </div>
+        <div class="perk">
+          <div class="perk-icon">💚</div>
+          <h3>Une chaîne plus utile</h3>
+          <p>Chaque note nous aide à garder uniquement les idées qui apportent de la valeur.</p>
+        </div>
+        <div class="perk">
+          <div class="perk-icon">🔒</div>
+          <h3>Avis respectueux</h3>
+          <p>Ton e-mail reste facultatif, sauf si tu souhaites recevoir une réponse.</p>
+        </div>
+      </div>
+    </div>
+
+    <form class="avis-form" id="avis-form">
+      <div class="form-icon">⭐</div>
+      <h2>Note ton expérience</h2>
+      <p class="form-note">SÉLECTIONNE UNE NOTE</p>
+
+      <div class="stars" id="stars">
+        <button type="button" class="star-btn" data-value="1" aria-label="1 étoile">★</button>
+        <button type="button" class="star-btn" data-value="2" aria-label="2 étoiles">★</button>
+        <button type="button" class="star-btn" data-value="3" aria-label="3 étoiles">★</button>
+        <button type="button" class="star-btn" data-value="4" aria-label="4 étoiles">★</button>
+        <button type="button" class="star-btn" data-value="5" aria-label="5 étoiles">★</button>
+      </div>
+
+      <input type="hidden" name="note" id="note-input" value="">
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="pseudo">Pseudo facultatif</label>
+          <input type="text" id="pseudo" name="pseudo" placeholder="Ex. Fan de fonds HD">
+        </div>
+        <div class="form-group">
+          <label for="email">E-mail facultatif</label>
+          <input type="email" id="email" name="email" placeholder="Si tu veux une réponse">
+        </div>
+      </div>
+
+      <div class="form-group" style="margin-bottom:16px">
+        <label for="prefere">Ce que tu préfères</label>
+        <select id="prefere" name="prefere">
+          <option>Les fonds nature</option>
+          <option>Les fonds jeux vidéo et manga</option>
+          <option>Les fonds minimalistes</option>
+          <option>Les fonds fantasy et épiques</option>
+          <option>Les duels et sondages</option>
+          <option>Autre</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="commentaire">Ton commentaire</label>
+        <textarea id="commentaire" name="commentaire" placeholder="Qu'est-ce qu'on devrait garder, améliorer ou ajouter ?"></textarea>
+      </div>
+
+      <div class="form-actions">
+        <a href="index.html" class="btn-secondary">Retour à l'accueil</a>
+        <button type="submit" class="btn-submit">Envoyer mon avis</button>
+      </div>
+
+      <p class="form-message error" id="form-error">Choisis d'abord une note en cliquant sur une étoile ⭐</p>
+      <p class="form-message success" id="form-success">Merci pour ton avis ! 🎉</p>
+      <p class="form-footer-note">Les champs vides ne seront pas transmis. Ajoute ton e-mail uniquement si tu souhaites recevoir une réponse.</p>
+    </form>
+  </div>
+
+  <script>
+    const form = document.getElementById("avis-form");
+    const stars = document.querySelectorAll(".star-btn");
+    const noteInput = document.getElementById("note-input");
+    const errorMsg = document.getElementById("form-error");
+    const successMsg = document.getElementById("form-success");
+
+    // Allume les étoiles de la 1ère jusqu'à la n-ième
+    function paintStars(n) {
+      stars.forEach(star => {
+        star.classList.toggle("filled", Number(star.dataset.value) <= n);
+      });
+    }
+
+    stars.forEach(star => {
+      // Au clic : on mémorise la note choisie
+      star.addEventListener("click", () => {
+        noteInput.value = star.dataset.value;
+        paintStars(Number(star.dataset.value));
+        errorMsg.style.display = "none";
+      });
+
+      // Au survol : aperçu temporaire
+      star.addEventListener("mouseenter", () => paintStars(Number(star.dataset.value)));
+    });
+
+    // Quand la souris quitte la zone des étoiles : on remet la note choisie
+    document.getElementById("stars").addEventListener("mouseleave", () => {
+      paintStars(Number(noteInput.value) || 0);
+    });
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      successMsg.style.display = "none";
+
+      // On refuse l'envoi tant qu'aucune note n'est choisie
+      if (!noteInput.value) {
+        errorMsg.style.display = "block";
+        return;
+      }
+
+      fetch("https://formspree.io/f/xqpedwaz", {
+        method: "POST",
+        body: new FormData(form),
+        headers: { "Accept": "application/json" }
+      }).then(response => {
+        if (response.ok) {
+          form.reset();
+          noteInput.value = "";
+          paintStars(0);
+          successMsg.style.display = "block";
+        } else {
+          alert("Une erreur est survenue, réessaie dans un instant.");
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
