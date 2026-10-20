@@ -1,0 +1,80 @@
+/* ============ MENU MOBILE (partagé par toutes les pages) ============ */
+
+/* Sur ordinateur : le bouton ☰ est caché, et le panneau "disparaît"
+   (ses liens restent exactement à leur place habituelle) */
+.burger { display: none; }
+.nav-panel { display: contents; }
+
+@media (max-width: 900px) {
+
+  /* Repère pour placer le panneau juste sous la barre du haut */
+  .navbar { position: relative; padding: 14px 20px; }
+
+  /* Le bouton ☰ apparaît */
+  .burger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    background: transparent;
+    border: 1px solid #1f2530;
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 22px;
+    cursor: pointer;
+  }
+
+  /* Le panneau : caché par défaut, il s'ouvre sous la barre */
+  .nav-panel {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+    padding: 12px 20px 24px;
+    background: #0d121b;
+    border-bottom: 1px solid #1f2530;
+    z-index: 50;
+    max-height: calc(100vh - 80px);
+    overflow-y: auto;
+  }
+
+  .menu-open .nav-panel { display: flex; }
+
+  /* Les liens s'empilent les uns sous les autres */
+  .nav-panel nav,
+  .nav-links,
+  .nav-extra {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+  }
+
+  .nav-panel a { font-size: 16px; padding: 12px 6px; }
+
+  /* Le bouton vert "Rejoindre la chaîne" en bas du panneau */
+  .nav-panel .btn-join,
+  .nav-panel .cta-button {
+    text-align: center;
+    padding: 14px 20px;
+    margin-top: 10px;
+  }
+
+  /* Le sous-menu "Plus" reste déplié (pas de survol sur téléphone) */
+  .nav-dropdown { padding: 0; margin: 0; }
+  .dropdown-menu {
+    position: static;
+    display: flex;
+    background: transparent;
+    border: none;
+    padding: 0 0 0 16px;
+    min-width: 0;
+  }
+  .dropdown-menu a { padding: 10px 6px; font-size: 15px; color: #9aa4b2; }
+}

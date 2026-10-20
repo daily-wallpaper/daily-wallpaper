@@ -1,0 +1,9 @@
+// Menu mobile : le bouton ☰ ouvre et ferme le panneau de liens
+const burger = document.getElementById("burger");
+const bar = document.querySelector("header, .navbar");
+
+burger.addEventListener("click", () => {
+  const open = bar.classList.toggle("menu-open");
+  burger.textContent = open ? "✕" : "☰";
+  burger.setAttribute("aria-expanded", open);
+});
