@@ -276,7 +276,7 @@
       .forEach(c => {
         const card = document.createElement("a");
         card.className = "collection-card";
-        card.href = "#"; // à remplacer plus tard par le lien de la collection
+        card.href = "collection.html?c=" + c.id;
 
         card.innerHTML = `
           <img src="${c.image}" alt="${c.titre}">
