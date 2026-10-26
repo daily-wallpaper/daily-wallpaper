@@ -36,7 +36,7 @@ const collections = [
     id: "espace",
     titre: "Espace & Galaxie",
     description: "Des étoiles lointaines et des nébuleuses pour une profondeur infinie.",
-    image: "space-1.jpg",
+    image: "image: "images/wallpapers/espace/space-1.jpg",",
     visible: true
   },
   {
