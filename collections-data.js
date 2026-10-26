@@ -32,11 +32,11 @@ const collections = [
     image: "https://images.unsplash.com/photo-1550684848-fac1c5b4e853?w=600",
     visible: true
   },
-  {
+    {
     id: "espace",
     titre: "Espace & Galaxie",
     description: "Des étoiles lointaines et des nébuleuses pour une profondeur infinie.",
-    image: "image: "images/wallpapers/espace/space-1.jpg",",
+    image: "images/wallpapers/espace/space-1.jpg",
     visible: true
   },
   {
