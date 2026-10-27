@@ -43,7 +43,7 @@ const collections = [
     id: "voyages",
     titre: "Voyages & merveilles",
     description: "Des villes fascinantes aux paysages grandioses, découvrez les plus beaux endroits de notre planète.",
-    image: "images/wallpapers/espace/moscou.jpeg",
+    image: "images/wallpapers/voyages/moscou.jpeg",
     visible: true
   },
 
