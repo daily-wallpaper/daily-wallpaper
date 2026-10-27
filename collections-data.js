@@ -40,6 +40,14 @@ const collections = [
     visible: true
   },
   {
+    id: "voyages",
+    titre: "Voyages & merveilles",
+    description: "Des villes fascinantes aux paysages grandioses, découvrez les plus beaux endroits de notre planète.",
+    image: "images/wallpapers/espace/moscou.jpeg",
+    visible: true
+  },
+
+  {
     id: "minimalisme",
     titre: "Minimalisme",
     description: "Clean, sombre et élégant pour un écran d'accueil aéré.",
