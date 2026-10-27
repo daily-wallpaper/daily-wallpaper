@@ -1,6 +1,6 @@
 const theme = {
-  emoji: "🌃",
+  emoji: "🎃",
   titre: "Villes de nuit",
-  image: "images/themes/villes-de-nuit.jpeg",
-  legende: "Des paysages époustouflants des grandes villes illuminées à travers la planète ! "
+  image: "images/themes/halloween.jpeg",
+  legende: "Des ambiances mystérieuses, des créatures effrayantes et des nuits hantées pour une semaine pleine de frissons ! "
 };
