@@ -13,6 +13,49 @@ const wallpapers = [
     visible: true
   },
   {
+    collection: "voyages",
+    titre: "Kremlin",
+    date: "21/10/2026",
+    image: "images/wallpapers/voyages/moscou.jpeg",
+    visible: true
+  },
+{
+    collection: "voyages",
+    titre: "Tour Eiffel",
+    date: "21/10/2026",
+    image: "images/wallpapers/voyages/eiffel.jpeg",
+    visible: true
+  },
+{
+    collection: "voyages",
+    titre: "Angkor Wat",
+    date: "21/10/2026",
+    image: "images/wallpapers/voyages/angkor.jpeg",
+    visible: true
+  },
+{
+    collection: "voyages",
+    titre: "Sagrada Familia",
+    date: "21/10/2026",
+    image: "images/wallpapers/voyages/sagrada.jpeg",
+    visible: true
+  },
+{
+    collection: "voyages",
+    titre: "Muraille de Chine",
+    date: "21/10/2026",
+    image: "images/wallpapers/voyages/muraille.jpeg",
+    visible: true
+  },
+{
+    collection: "voyages",
+    titre: "Burj Khalifa",
+    date: "21/10/2026",
+    image: "images/wallpapers/voyages/burj.jpeg",
+    visible: true
+  },
+
+  {
     collection: "espace",
     titre: "Mars",
     date: "21/10/2026",
