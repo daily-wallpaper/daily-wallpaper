@@ -1,0 +1,19 @@
+media:
+  input: media
+  output: /daily-wallpaper/media
+
+content:
+  - name: theme
+    label: Thème de la semaine
+    type: file
+    path: data/theme.json
+    fields:
+      - name: theme
+        label: Thème
+        type: string
+      - name: description
+        label: Description
+        type: text
+      - name: debut
+        label: Début de la semaine
+        type: date
