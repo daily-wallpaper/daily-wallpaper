@@ -4,9 +4,15 @@
       "emoji": "🔬",
       "nom": "Sciences",
       "anecdotes": [
-        { "titre": "Exemple", "texte": "Une anecdote sur les sciences." }
+        {
+          "titre": "C'est chaud, un éclair !",
+          "texte": "Un coup de foudre est 5 fois plus chaud que la surface du soleil."
+        }
       ]
     },
-    { "emoji": "🌍", "nom": "Géographie", "anecdotes": [] }
+    {
+      "emoji": "🌍",
+      "nom": "Géographie"
+    }
   ]
 }
