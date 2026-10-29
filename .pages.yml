@@ -26,7 +26,7 @@ content:
         options:
           values: [vert, orange, violet, bleu, rouge, rose, jaune]
 
-   - name: collections
+  - name: collections
     label: Collections
     type: file
     path: data/collections.json
