@@ -1,7 +1,7 @@
 {
-  "theme": "Nature sauvage",
-  "description": "Cette semaine, la communauté a choisi la nature.",
+  "theme": "Haloween",
+  "description": "Des ambiances mystérieuses, des créatures effrayantes et des nuits hantées pour une semaine pleine de frissons !",
   "debut": "2026-10-26",
-  "image": "",
-  "couleur": "vert"
+  "image": "/daily-wallpaper/media/halloween.jpeg",
+  "couleur": "orange"
 }
