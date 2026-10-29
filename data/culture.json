@@ -1,8 +1,12 @@
 {
-  "sujets": [
-    { "emoji": "🌍", "nom": "Géographie", "texte": "" },
-    { "emoji": "🎨", "nom": "Art", "texte": "" },
-    { "emoji": "🔬", "nom": "Science", "texte": "" },
-    { "emoji": "🦊", "nom": "Kitsu", "texte": "" }
+  "categories": [
+    {
+      "emoji": "🔬",
+      "nom": "Sciences",
+      "anecdotes": [
+        { "titre": "Exemple", "texte": "Une anecdote sur les sciences." }
+      ]
+    },
+    { "emoji": "🌍", "nom": "Géographie", "anecdotes": [] }
   ]
 }

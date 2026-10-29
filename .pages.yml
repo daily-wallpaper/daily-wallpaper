@@ -18,30 +18,13 @@ content:
         label: Début de la semaine
         type: date
 
-  - name: collections
-    label: Collections (wallpapers)
+   - name: collections
+    label: Collections
     type: file
     path: data/collections.json
     fields:
-      - name: wallpapers
-        label: Wallpapers
-        type: object
-        list: true
-        fields:
-          - name: titre
-            label: Titre
-            type: string
-          - name: image
-            label: Image
-            type: image
-
-  - name: culture
-    label: Culture
-    type: file
-    path: data/culture.json
-    fields:
-      - name: sujets
-        label: Cases
+      - name: categories
+        label: Catégories
         type: object
         list: true
         fields:
@@ -49,8 +32,44 @@ content:
             label: Emoji
             type: string
           - name: nom
-            label: Nom
+            label: Nom de la catégorie
             type: string
-          - name: texte
-            label: Texte
-            type: text
+          - name: wallpapers
+            label: Wallpapers
+            type: object
+            list: true
+            fields:
+              - name: titre
+                label: Titre
+                type: string
+              - name: image
+                label: Image
+                type: image
+
+  - name: culture
+    label: Culture
+    type: file
+    path: data/culture.json
+    fields:
+      - name: categories
+        label: Catégories
+        type: object
+        list: true
+        fields:
+          - name: emoji
+            label: Emoji
+            type: string
+          - name: nom
+            label: Nom de la catégorie
+            type: string
+          - name: anecdotes
+            label: Anecdotes
+            type: object
+            list: true
+            fields:
+              - name: titre
+                label: Titre
+                type: string
+              - name: texte
+                label: Texte
+                type: text
