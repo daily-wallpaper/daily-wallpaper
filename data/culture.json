@@ -1,0 +1,8 @@
+{
+  "sujets": [
+    { "emoji": "🌍", "nom": "Géographie", "texte": "" },
+    { "emoji": "🎨", "nom": "Art", "texte": "" },
+    { "emoji": "🔬", "nom": "Science", "texte": "" },
+    { "emoji": "🦊", "nom": "Kitsu", "texte": "" }
+  ]
+}
