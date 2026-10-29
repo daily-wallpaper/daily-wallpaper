@@ -1,14 +1,16 @@
 {
   "categories": [
     { "emoji": "🏛️", "nom": "Architecture & merveilles", "wallpapers": [] },
-    { "emoji": "✨", "nom": "Minimaliste", "wallpapers": [] }
-    { "emoji": "🌍", "nom": "Espace & Galaxies", "wallpapers": [] }
-    { "emoji": "🎨", "nom": "Art Abstrait & 3D", "wallpapers": [] }
-    { "emoji": "✈️", "nom": "Avions & Armées", "wallpapers": [] }
-    { "emoji": "🏛️", "nom": "Mythologie & Légendes", "wallpapers": [] }
-    { "emoji": "🤖", "nom": "Cyberpunk & Science-Fiction", "wallpapers": [] }
-    { "emoji": "🦊", "nom": "Animaux & Nature", "wallpapers": [] }
+    { "emoji": "✨", "nom": "Minimaliste", "wallpapers": [] },
+    { "emoji": "🌍", "nom": "Espace & Galaxies", "wallpapers": [] },
+    { "emoji": "🎨", "nom": "Art Abstrait & 3D", "wallpapers": [] },
+    { "emoji": "✈️", "nom": "Avions & Armées", "wallpapers": [] },
+    { "emoji": "🏛️", "nom": "Mythologie & Légendes", "wallpapers": [] },
+    { "emoji": "🤖", "nom": "Cyberpunk & Science-Fiction", "wallpapers": [] },
+    { "emoji": "🦊", "nom": "Animaux & Nature", "wallpapers": [] },
     { "emoji": "⚽", "nom": "Sport", "wallpapers": [] }
-
+  ],
+  "wallpapers": [
+    {}
   ]
 }
