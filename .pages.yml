@@ -96,3 +96,47 @@ content:
           - name: image
             label: Image (facultative)
             type: image
+
+  - name: nouvelles
+    label: Nouvelles
+    type: file
+    path: data/nouvelles.json
+    fields:
+      - name: nouvelles
+        label: Nouvelles
+        type: object
+        list: true
+        fields:
+          - name: titre
+            label: Titre
+            type: string
+          - name: texte
+            label: Texte
+            type: text
+          - name: date
+            label: Date
+            type: date
+          - name: lien
+            label: Lien externe (facultatif)
+            type: string
+
+  - name: quiz
+    label: Quiz
+    type: file
+    path: data/quiz.json
+    fields:
+      - name: questions
+        label: Questions
+        type: object
+        list: true
+        fields:
+          - name: question
+            label: Question
+            type: string
+          - name: reponses
+            label: Réponses (2 à 4)
+            type: string
+            list: true
+          - name: bonne
+            label: Numéro de la bonne réponse (1 = la première)
+            type: number
