@@ -17,6 +17,14 @@ content:
       - name: debut
         label: Début de la semaine
         type: date
+      - name: image
+        label: Image du thème
+        type: image
+      - name: couleur
+        label: Couleur du fond animé
+        type: select
+        options:
+          values: [vert, orange, violet, bleu, rouge, rose, jaune]
 
    - name: collections
     label: Collections
