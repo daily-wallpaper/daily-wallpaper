@@ -128,7 +128,7 @@ content:
             label: Lien externe (facultatif)
             type: string
 
-   - name: quiz
+  - name: quiz
     label: Quiz
     type: file
     path: data/quiz.json
