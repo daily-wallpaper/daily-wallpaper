@@ -128,23 +128,34 @@ content:
             label: Lien externe (facultatif)
             type: string
 
-  - name: quiz
+   - name: quiz
     label: Quiz
     type: file
     path: data/quiz.json
     fields:
-      - name: questions
-        label: Questions
+      - name: categories
+        label: Thèmes
         type: object
         list: true
         fields:
-          - name: question
-            label: Question
+          - name: emoji
+            label: Emoji
             type: string
-          - name: reponses
-            label: Réponses (2 à 4)
+          - name: nom
+            label: Nom du thème
             type: string
+          - name: questions
+            label: Questions
+            type: object
             list: true
-          - name: bonne
-            label: Numéro de la bonne réponse (1 = la première)
-            type: number
+            fields:
+              - name: question
+                label: Question
+                type: string
+              - name: reponses
+                label: Réponses (2 à 4)
+                type: string
+                list: true
+              - name: bonne
+                label: Numéro de la bonne réponse (1 = la première)
+                type: number

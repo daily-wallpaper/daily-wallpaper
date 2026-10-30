@@ -37,3 +37,29 @@
     }
   ]
 }
+{
+  "categories": [
+    {
+      "emoji": "🌍",
+      "nom": "Géographie",
+      "questions": [
+        {
+          "question": "Quelle est la capitale de la France ?",
+          "reponses": ["Lyon", "Paris", "Marseille"],
+          "bonne": 2
+        }
+      ]
+    },
+    {
+      "emoji": "🔬",
+      "nom": "Sciences",
+      "questions": [
+        {
+          "question": "Quelle est la planète la plus proche du Soleil ?",
+          "reponses": ["Mercure", "Vénus", "Mars", "Jupiter"],
+          "bonne": 1
+        }
+      ]
+    }
+  ]
+}
