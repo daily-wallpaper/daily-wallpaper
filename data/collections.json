@@ -16,7 +16,13 @@
     },
     {
       "emoji": "🌍",
-      "nom": "Espace & Galaxies"
+      "nom": "Espace & Galaxies",
+      "wallpapers": [
+        {
+          "titre": "Terre",
+          "image": "/daily-wallpaper/media/space-1-1.jpg"
+        }
+      ]
     },
     {
       "emoji": "🎨",
