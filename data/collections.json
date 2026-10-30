@@ -2,7 +2,13 @@
   "categories": [
     {
       "emoji": "🏠",
-      "nom": "Architecture & merveilles"
+      "nom": "Architecture & merveilles",
+      "wallpapers": [
+        {
+          "titre": "Tour Eiffel",
+          "image": "/daily-wallpaper/media/eiffel-1.jpeg"
+        }
+      ]
     },
     {
       "emoji": "✨",
