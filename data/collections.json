@@ -58,7 +58,13 @@
     },
     {
       "emoji": "📖",
-      "nom": "Livres & Mangas"
+      "nom": "Livres & Mangas",
+      "wallpapers": [
+        {
+          "titre": "HxH: Gon",
+          "image": "/daily-wallpaper/media/hxh_Gon.jpg"
+        }
+      ]
     }
   ]
 }
