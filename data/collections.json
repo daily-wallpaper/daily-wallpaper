@@ -1,0 +1,70 @@
+{
+  "categories": [
+    {
+      "emoji": "🏠",
+      "nom": "Architecture & merveilles",
+      "wallpapers": [
+        {
+          "titre": "Tour Eiffel",
+          "image": "/daily-wallpaper/media/eiffel-1.jpeg"
+        }
+      ]
+    },
+    {
+      "emoji": "✨",
+      "nom": "Minimaliste"
+    },
+    {
+      "emoji": "🌍",
+      "nom": "Espace & Galaxies",
+      "wallpapers": [
+        {
+          "titre": "Terre",
+          "image": "/daily-wallpaper/media/space-1-1.jpg"
+        },
+        {
+          "titre": "Mars",
+          "image": "/daily-wallpaper/media/space-2-2.jpg"
+        },
+        {
+          "titre": "Supernova",
+          "image": "/daily-wallpaper/media/space-3-2.jpg"
+        }
+      ]
+    },
+    {
+      "emoji": "🎨",
+      "nom": "Art Abstrait & 3D"
+    },
+    {
+      "emoji": "✈️",
+      "nom": "Avions & Armées"
+    },
+    {
+      "emoji": "🏛️",
+      "nom": "Mythologie & Légendes"
+    },
+    {
+      "emoji": "🤖",
+      "nom": "Cyberpunk & Science-Fiction"
+    },
+    {
+      "emoji": "🦊",
+      "nom": "Animaux & Nature"
+    },
+    {
+      "emoji": "⚽",
+      "nom": "Sport"
+    },
+    {
+      "emoji": "📖",
+      "nom": "Livres & Mangas",
+      "wallpapers": [
+        {
+          "titre": "HxH: Gon",
+          "image": "/daily-wallpaper/media/hxh_Gon.jpg"
+        }
+      ]
+    }
+  ]
+}

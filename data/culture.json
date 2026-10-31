@@ -1,0 +1,18 @@
+{
+  "categories": [
+    {
+      "emoji": "🔬",
+      "nom": "Sciences",
+      "anecdotes": [
+        {
+          "titre": "C'est chaud, un éclair !",
+          "texte": "Un coup de foudre est 5 fois plus chaud que la surface du soleil."
+        }
+      ]
+    },
+    {
+      "emoji": "🌍",
+      "nom": "Géographie"
+    }
+  ]
+}

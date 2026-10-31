@@ -1,0 +1,161 @@
+media:
+  input: media
+  output: /daily-wallpaper/media
+
+content:
+  - name: theme
+    label: Thème de la semaine
+    type: file
+    path: data/theme.json
+    fields:
+      - name: theme
+        label: Thème
+        type: string
+      - name: description
+        label: Description
+        type: text
+      - name: debut
+        label: Début de la semaine
+        type: date
+      - name: image
+        label: Image du thème
+        type: image
+      - name: couleur
+        label: Couleur du fond animé
+        type: select
+        options:
+          values: [vert, orange, violet, bleu, rouge, rose, jaune]
+
+  - name: collections
+    label: Collections
+    type: file
+    path: data/collections.json
+    fields:
+      - name: categories
+        label: Catégories
+        type: object
+        list: true
+        fields:
+          - name: emoji
+            label: Emoji
+            type: string
+          - name: nom
+            label: Nom de la catégorie
+            type: string
+          - name: wallpapers
+            label: Wallpapers
+            type: object
+            list: true
+            fields:
+              - name: titre
+                label: Titre
+                type: string
+              - name: image
+                label: Image
+                type: image
+
+  - name: culture
+    label: Culture
+    type: file
+    path: data/culture.json
+    fields:
+      - name: categories
+        label: Catégories
+        type: object
+        list: true
+        fields:
+          - name: emoji
+            label: Emoji
+            type: string
+          - name: nom
+            label: Nom de la catégorie
+            type: string
+          - name: anecdotes
+            label: Anecdotes
+            type: object
+            list: true
+            fields:
+              - name: titre
+                label: Titre
+                type: string
+              - name: texte
+                label: Texte
+                type: text
+
+  - name: posts
+    label: Posts récents
+    type: file
+    path: data/posts.json
+    fields:
+      - name: posts
+        label: Posts
+        type: object
+        list: true
+        fields:
+          - name: legende
+            label: Légende
+            type: string
+          - name: texte
+            label: Texte détaillé (affiché quand on déplie)
+            type: text
+          - name: date
+            label: Date
+            type: date
+          - name: image
+            label: Image (facultative)
+            type: image
+
+  - name: nouvelles
+    label: Nouvelles
+    type: file
+    path: data/nouvelles.json
+    fields:
+      - name: nouvelles
+        label: Nouvelles
+        type: object
+        list: true
+        fields:
+          - name: titre
+            label: Titre
+            type: string
+          - name: texte
+            label: Texte
+            type: text
+          - name: date
+            label: Date
+            type: date
+          - name: lien
+            label: Lien externe (facultatif)
+            type: string
+
+  - name: quiz
+    label: Quiz
+    type: file
+    path: data/quiz.json
+    fields:
+      - name: categories
+        label: Thèmes
+        type: object
+        list: true
+        fields:
+          - name: emoji
+            label: Emoji
+            type: string
+          - name: nom
+            label: Nom du thème
+            type: string
+          - name: questions
+            label: Questions
+            type: object
+            list: true
+            fields:
+              - name: question
+                label: Question
+                type: string
+              - name: reponses
+                label: Réponses (2 à 4)
+                type: string
+                list: true
+              - name: bonne
+                label: Numéro de la bonne réponse (1 = la première)
+                type: number
