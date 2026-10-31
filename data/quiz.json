@@ -1,43 +1,4 @@
 {
-  "questions": [
-    {
-      "question": "Dans la mythologie grecque, quel dieu règne sur la mer ?",
-      "reponses": ["Arès", "Poséidon", "Hadès", "Zeus"],
-      "bonne": 2
-    },
-    {
-      "question": "Quelle définition d'écran correspond à la 4K grand public (UHD) ?",
-      "reponses": ["2560 × 1440", "1280 × 720", "1920 × 1080", "3840 × 2160"],
-      "bonne": 4
-    },
-    {
-      "question": "Au début du Moyen Âge, de quoi étaient souvent faits les premiers châteaux forts ?",
-      "reponses": ["De marbre", "De béton", "De bois", "De briques"],
-      "bonne": 3
-    },
-    {
-      "question": "Quel héros de la mythologie grecque a vaincu méduse ?",
-      "reponses": ["Héraclès", "Achille", "Thésé", "Persée"],
-      "bonne": 4
-    },
-    {
-      "question": "Dans la série The Legend of Zelda, comment s'appelle le héros que l'on incarne ?",
-      "reponses": ["Ganon", "Epona", "Link", "Zelda"],
-      "bonne": 3
-    },
-    {
-      "question": "Quelle est la capitale de la France ?",
-      "reponses": ["Lyon", "Paris", "Marseille", "Toulouse"],
-      "bonne": 2
-    },
-    {
-      "question": "Quelle est la planète la plus proche du Soleil ?",
-      "reponses": ["Mercure", "Vénus", "Mars", "Jupiter"],
-      "bonne": 1
-    }
-  ]
-}
-{
   "categories": [
     {
       "emoji": "🌍",
