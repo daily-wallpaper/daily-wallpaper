@@ -42,7 +42,13 @@
     },
     {
       "emoji": "🏛️",
-      "nom": "Mythologie & Légendes"
+      "nom": "Mythologie & Légendes",
+      "wallpapers": [
+        {
+          "titre": "Dieux grecs",
+          "image": "/daily-wallpaper/media/IMG-20260722-WA0012.jpg"
+        }
+      ]
     },
     {
       "emoji": "🤖",
