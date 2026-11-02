@@ -54,7 +54,13 @@
     },
     {
       "emoji": "⚽",
-      "nom": "Sport"
+      "nom": "Sport",
+      "wallpapers": [
+        {
+          "titre": "Sport mélangés",
+          "image": "/daily-wallpaper/media/IMG-20260531-WA0134.jpg"
+        }
+      ]
     },
     {
       "emoji": "📖",
