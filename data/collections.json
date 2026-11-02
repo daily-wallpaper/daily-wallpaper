@@ -12,7 +12,13 @@
     },
     {
       "emoji": "✨",
-      "nom": "Minimaliste"
+      "nom": "Minimaliste",
+      "wallpapers": [
+        {
+          "titre": "Coucher de soleil ",
+          "image": "/daily-wallpaper/media/SmartSelect_20261102_173808.jpg"
+        }
+      ]
     },
     {
       "emoji": "🌍",
