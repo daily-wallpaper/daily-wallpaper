@@ -74,7 +74,13 @@
     },
     {
       "emoji": "🎉",
-      "nom": "Noël et Haloween"
+      "nom": "Noël et Haloween",
+      "wallpapers": [
+        {
+          "titre": "Haloween",
+          "image": "/daily-wallpaper/media/file_000000000d2481f48cb8dcac1e42e4f1-1.png"
+        }
+      ]
     },
     {
       "emoji": "🎮",
