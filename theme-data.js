@@ -1,6 +1,6 @@
 const theme = {
-  emoji: "🎃",
-  titre: "Halloween",
-  image: "images/themes/halloween.jpeg",
-  legende: "Des ambiances mystérieuses, des créatures effrayantes et des nuits hantées pour une semaine pleine de frissons ! "
+  emoji: "✨",
+  titre: "Minimaliste",
+  image: "Elève CDI\Downloads\OIP (1).webp",
+  legende: "Des lignes épurées, des couleurs douces et des compositions élégantes pour un univers apaisant et plein de simplicité ! "
 };
