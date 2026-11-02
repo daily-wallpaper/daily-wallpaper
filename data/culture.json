@@ -1,0 +1,24 @@
+{
+  "categories": [
+    {
+      "emoji": "🔬",
+      "nom": "Sciences",
+      "anecdotes": [
+        {
+          "titre": "C'est chaud, un éclair !",
+          "texte": "Un coup de foudre est 5 fois plus chaud que la surface du soleil."
+        }
+      ]
+    },
+    {
+      "emoji": "🌍",
+      "nom": "Géographie",
+      "anecdotes": [
+        {
+          "titre": "Le 7ème continent",
+          "texte": "Le 7e continent est composé de plastique, mais on ne peux pas y marcher ! Ce ne sont que des micro-plastiques qui flottent dans l'eau."
+        }
+      ]
+    }
+  ]
+}

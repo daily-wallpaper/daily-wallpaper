@@ -2,41 +2,121 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Daily Wallpaper</title>
+<link rel="icon" type="image/png" href="images/kitsu-icon.png">
+<link rel="apple-touch-icon" href="images/kitsu-icon.png">
   <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="menu-mobile.css">
 </head>
 <body>
 
   <nav class="navbar">
     <div class="logo">
-      <div class="logo-icon">📱</div>
+      <div class="logo-icon"><img src="images/logo.png" alt="Logo Daily Wallpaper"></div>
       <div class="logo-text">
-        <span class="name">Daily Wallpaper</span>
+        <span class="name">Daily Wallpapers</span>
         <span class="tag">CANAL WHATSAPP</span>
       </div>
     </div>
+<button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
+<div class="nav-panel">
     <div class="nav-links">
-      <a href="#">Accueil</a>
-      <a href="#">Collections</a>
-      <a href="#">Nouvelles</a>
-      <a href="#">Plus</a>
-    </div>
-    <a href="#" class="btn-join">Rejoindre la chaîne</a>
+  <a href="index.html">Accueil</a>
+  <a href="collections.html">Collections</a>
+  <a href="nouvelles.html">Nouvelles</a>
+  <div class="nav-dropdown">
+  <a href="#">Plus <span class="arrow">⌄</span></a>
+ <div class="dropdown-menu">
+ <a href="culture.html">Culture</a>
+<a href="quiz.html">Quiz</a>
+<a href="avis.html">Donne ton avis</a>
+  <a href="contact.html">Message anonyme</a>
+  </div>
+</div>
+</div><div class="nav-extra">
+  <a href="#" class="icon-link">
+    <svg viewBox="0 0 24 24"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><path d="M10 17l5-5-5-5"/><path d="M15 12H3"/></svg>
+    Connexion
+  </a>
+  <a href="#" class="icon-link">Discord</a>
+</div>
+    <a href="https://whatsapp.com/channel/0029VbCLrYOJ3juwuvAiIg3p" class="btn-join">Rejoindre la chaîne</a>
+</div>
   </nav>
 
   <section class="hero">
     <span class="hero-icon">🖼️</span>
     <h1>Daily Wallpapers</h1>
     <p>Un nouveau fond d'écran chaque jour</p>
-    <a href="#" class="btn-main">Rejoindre WhatsApp</a>
+    <a href="https://whatsapp.com/channel/0029VbCLrYOJ3juwuvAiIg3p" class="btn-main">Rejoindre WhatsApp</a>
   </section>
-  <section class="theme-section">
-    <p class="theme-label">🔥 Le thème de la semaine</p>
-    <h2 class="theme-title">🐦 Oiseaux</h2>
-    <div class="theme-image-wrap">
-      <img src="https://images.unsplash.com/photo-1444464666168-49d633b86797?w=900" alt="Oiseaux en vol">
-      <p class="theme-caption">Des fonds d'écran exclusifs sur les oiseaux toute la semaine !</p>
+  <section class="theme-section" id="theme-section"></section>
+  <section class="kitsu-section">
+    <div class="kitsu-text">
+      <p class="kitsu-icon-title">🦊 Kitsu</p>
+      <p class="kitsu-subtitle">La mascotte de Daily Wallpapers</p>
+      <p>Kitsu parcourt le web à la recherche des plus beaux clichés. Avec son œil d'expert, il sélectionne manuellement chaque fond d'écran pour s'assurer qu'il s'adapte parfaitement à votre smartphone et respecte le thème de la semaine.</p>
     </div>
-  </section>
+    <div class="kitsu-image">
+      <img src="images/kitsu.png" alt="Kitsu, la mascotte de Daily Wallpaper">
+    </div>
+  </section>  <section class="why-section">
+    <h2 class="why-title">Pourquoi nous rejoindre ?</h2>
+    <div class="why-grid">
+      <div class="why-card">
+        <span class="why-icon">🖼️</span>
+        <h3>Qualité HD/4K</h3>
+        <p>Des fonds d'écran soigneusement sélectionnés, toujours en haute définition.</p>
+      </div>
+      <div class="why-card">
+        <span class="why-icon">📅</span>
+        <h3>Chaque jour</h3>
+        <p>Un nouveau wallpaper livré directement sur WhatsApp, sans effort.</p>
+      </div>
+      <div class="why-card">
+        <span class="why-icon">🦊</span>
+        <h3>Sélection de Kitsu</h3>
+        <p>Chaque image est choisie à la main pour s'adapter parfaitement à votre écran.</p>
+      </div>
+      <div class="why-card">
+        <span class="why-icon">🎉</span>
+        <h3>Communauté active</h3>
+        <p>Duels, sondages, quiz et défis pour participer, pas juste regarder.</p>
+      </div>
+    </div>
+  </section>  <section class="duel-section" id="duel-section"></section>
+<script src="theme-data.js"></script>
+<script src="duel-data.js"></script>
+<script>
+  // Remplit la section "Thème de la semaine" à partir de theme-data.js
+  document.getElementById("theme-section").innerHTML = `
+    <p class="theme-label">🔥 Le thème de la semaine</p>
+    <h2 class="theme-title">${theme.emoji} ${theme.titre}</h2>
+    <div class="theme-image-wrap">
+      <img src="${theme.image}" alt="${theme.titre}">
+      <p class="theme-caption">${theme.legende}</p>
+    </div>
+  `;
+
+  // Remplit la section "Duel" à partir de duel-data.js
+  document.getElementById("duel-section").innerHTML = `
+    <h2 class="duel-title">⚔️ Le Duel de la semaine</h2>
+    <p class="duel-subtitle">Votez pour votre wallpaper préféré !</p>
+    <div class="duel-versus">
+      <div class="duel-option">
+        <img src="${duel.option1.image}" alt="${duel.option1.nom}">
+        <div class="duel-label">${duel.option1.nom}</div>
+      </div>
+      <span class="duel-vs">VS</span>
+      <div class="duel-option">
+        <img src="${duel.option2.image}" alt="${duel.option2.nom}">
+        <div class="duel-label">${duel.option2.nom}</div>
+      </div>
+    </div>
+    <a href="${duel.lienVote}" class="duel-vote-btn">Voter maintenant</a>
+  `;
+</script>
+<script src="menu-mobile.js"></script>
 </body>
 </html>

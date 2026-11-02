@@ -4,7 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Collections — Daily Wallpaper</title>
-
+<link rel="icon" type="image/png" href="images/kitsu-icon.png">
+<link rel="apple-touch-icon" href="images/kitsu-icon.png">
 <style>
   /* ============ VARIABLES DE DESIGN ============
      Change une couleur ici, elle change partout sur la page. */
@@ -14,8 +15,8 @@
     --card-bg: #131822;
     --text-light: #ffffff;
     --text-muted: #9aa4b2;
-    --green: #22c55e;
-    --green-dark: #16a34a;
+    --accent: #F97316;
+    --accent-action: #22c55e;
     --border: #1f2530;
   }
 
@@ -48,14 +49,19 @@
   }
 
   .logo-icon {
-    width: 38px;
-    height: 38px;
-    background: var(--green);
-    border-radius: 10px;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 18px;
+  }
+
+  .logo-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   .logo-text {
@@ -69,7 +75,7 @@
 
   .logo-text .sub {
     font-size: 11px;
-    color: var(--green);
+    color: var(--accent);
     letter-spacing: 0.5px;
   }
 
@@ -89,11 +95,11 @@
   nav a.active,
   nav a:hover {
     opacity: 1;
-    color: var(--green);
+    color: var(--accent);
   }
 
   .cta-button {
-    background: var(--green);
+    background: var(--accent-action);
     color: #06240f;
     padding: 10px 20px;
     border-radius: 999px;
@@ -109,7 +115,7 @@
   }
 
   .eyebrow {
-    color: var(--green);
+    color: var(--accent);
     font-size: 13px;
     display: inline-flex;
     align-items: center;
@@ -121,7 +127,7 @@
     content: "";
     width: 24px;
     height: 1px;
-    background: var(--green);
+    background: var(--accent);
     display: inline-block;
   }
 
@@ -131,7 +137,7 @@
   }
 
   .hero h1 .accent {
-    color: var(--green);
+    color: var(--accent);
   }
 
   .hero p {
@@ -206,13 +212,27 @@
   @media (max-width: 480px) {
     .collections-grid { grid-template-columns: 1fr; padding: 24px; }
   }
+
+  /* ============ MENU DÉROULANT "PLUS" ============ */
+  .nav-dropdown { position: relative; padding-bottom: 14px; margin-bottom: -14px; }
+  .nav-dropdown > a { display: flex; align-items: center; gap: 4px; }
+  .dropdown-menu {
+    position: absolute; top: 100%; left: 0;
+    background: var(--card-bg); border: 1px solid var(--border);
+    border-radius: 10px; padding: 8px; min-width: 160px;
+    display: none; flex-direction: column; gap: 2px;
+  }
+  .nav-dropdown:hover .dropdown-menu { display: flex; }
+  .dropdown-menu a { color: var(--text-muted); text-decoration: none; font-size: 14px; padding: 8px 12px; border-radius: 6px; }
+  .dropdown-menu a:hover { background: #1a2030; color: var(--text-light); }
+  .arrow { position: relative; top: 1px; }
 </style>
 </head>
 <body>
 
   <header>
     <div class="logo">
-      <div class="logo-icon">📱</div>
+      <div class="logo-icon"><img src="images/logo.png" alt="Logo Daily Wallpaper"></div>
       <div class="logo-text">
         <div class="name">Daily Wallpaper</div>
         <div class="sub">CANAL WHATSAPP</div>
@@ -222,11 +242,19 @@
       <a href="index.html">Accueil</a>
       <a href="collections.html" class="active">Collections</a>
       <a href="nouvelles.html">Nouvelles</a>
-      <a href="#">Plus</a>
+      <div class="nav-dropdown">
+        <a href="#">Plus <span class="arrow">⌄</span></a>
+        <div class="dropdown-menu">
+          <a href="culture.html">Culture</a>
+          <a href="quiz.html">Quiz</a>
+          <a href="avis.html">Donne ton avis</a>
+          <a href="contact.html">Message anonyme</a>
+        </div>
+      </div>
       <a href="#">Connexion</a>
       <a href="#">Discord</a>
     </nav>
-    <a class="cta-button" href="#">Rejoindre la chaîne</a>
+    <a class="cta-button" href="https://whatsapp.com/channel/0029VbCLrYOJ3juwuvAiIg3p">Rejoindre la chaîne</a>
   </header>
 
   <section class="hero">
@@ -251,7 +279,7 @@
       .forEach(c => {
         const card = document.createElement("a");
         card.className = "collection-card";
-        card.href = "#"; // à remplacer plus tard par le lien de la collection
+        card.href = "collection.html?c=" + c.id;
 
         card.innerHTML = `
           <img src="${c.image}" alt="${c.titre}">
