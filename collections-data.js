@@ -32,6 +32,21 @@ const collections = [
     image: "https://images.unsplash.com/photo-1550684848-fac1c5b4e853?w=600",
     visible: true
   },
+{
+   id: "animaux",
+   titre: "Animaux & monde sauvage",
+    description: "Des formes vibrantes et des couleurs néon pour faire ressortir votre écran OLED.",
+    image: "https://images.unsplash.com/photo-1550684848-fac1c5b4e853?w=600",
+    visible: true
+  },
+{
+    id: "fantasy",
+    titre: "Fantasy & mondes imaginaires",
+    description: "Plongez dans des mondes extraordinaires peuplés de magie, de créatures fantastiques et de légendes épiques.",
+    image: "images/wallpapers/fantasy/halloween-1.jpg",
+    visible: true
+  },
+
     {
     id: "espace",
     titre: "Espace & Galaxie",
