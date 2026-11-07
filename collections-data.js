@@ -66,7 +66,7 @@ const collections = [
     id: "minimalisme",
     titre: "Minimalisme",
     description: "Clean, sombre et élégant pour un écran d'accueil aéré.",
-    image: "https://images.unsplash.com/photo-1518655048521-f130df041f66?w=600",
+    image: "images/wallpapers/minimalisme/minimalisme.jpeg",
     visible: true
   }
 ];

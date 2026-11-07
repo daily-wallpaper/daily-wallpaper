@@ -69,6 +69,21 @@ date: "26/10/2026",
 image: "images/wallpapers/fantasy/halloween-1.jpeg",
 visible: true
 },
+{
+    collection: "minimalisme",
+    titre: "Coucher de soleil",
+    date: "7/11/2026",
+    image: "images/wallpapers/minimalisme/minimalisme.jpeg",
+    visible: true
+  },
+{
+    collection: "minimalisme",
+    titre: "Forêt brumeuse",
+    date: "7/11/2026",
+    image: "images/wallpapers/minimalisme/foret-brume.jpeg",
+    visible: true
+  },
+
   {
     collection: "espace",
     titre: "Supernova",
