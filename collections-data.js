@@ -35,8 +35,8 @@ const collections = [
 {
    id: "animaux",
    titre: "Animaux & monde sauvage",
-    description: "Des formes vibrantes et des couleurs néon pour faire ressortir votre écran OLED.",
-    image: "https://images.unsplash.com/photo-1550684848-fac1c5b4e853?w=600",
+    description: "Partez à la rencontre des animaux les plus fascinants et découvrez toute la beauté du monde sauvage.",
+    image: "images/wallpapers/animaux/chouette.jpeg",
     visible: true
   },
 {

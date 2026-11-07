@@ -83,7 +83,34 @@ visible: true
     image: "images/wallpapers/minimalisme/foret-brume.jpeg",
     visible: true
   },
-
+{
+    collection: "animaux",
+    titre: "Colibri",
+    date: "7/11/2026",
+    image: "images/wallpapers/animaux/colibri.jpeg",
+    visible: true
+  },
+{
+    collection: "animaux",
+    titre: "Martin pêcheur",
+    date: "7/11/2026",
+    image: "images/wallpapers/animaux/martin.jpeg",
+    visible: true
+  },
+{
+    collection: "animaux",
+    titre: "Chouette",
+    date: "7/11/2026",
+    image: "images/wallpapers/animaux/chouette.jpeg",
+    visible: true
+  },
+{
+    collection: "animaux",
+    titre: "Pygargue à tête blanche",
+    date: "7/11/2026",
+    image: "images/wallpapers/animaux/pygargue.jpeg",
+    visible: true
+  },
   {
     collection: "espace",
     titre: "Supernova",
