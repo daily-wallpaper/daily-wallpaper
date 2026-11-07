@@ -43,7 +43,7 @@ const collections = [
     id: "fantasy",
     titre: "Fantasy & mondes imaginaires",
     description: "Plongez dans des mondes extraordinaires peuplés de magie, de créatures fantastiques et de légendes épiques.",
-    image: "images/wallpapers/fantasy/halloween-1.jpg",
+    image: "images/wallpapers/fantasy/halloween-1.jpeg",
     visible: true
   },
 

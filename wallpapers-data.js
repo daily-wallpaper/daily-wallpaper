@@ -62,6 +62,13 @@ const wallpapers = [
     image: "images/wallpapers/espace/space-2.jpg",
     visible: true
   },
+{
+collection: "fantasy",
+titre: "Halloween, la nuit des Morts",
+date: "26/10/2026",
+image: "images/wallpapers/fantasy/halloween-1.jpeg",
+visible: true
+},
   {
     collection: "espace",
     titre: "Supernova",
