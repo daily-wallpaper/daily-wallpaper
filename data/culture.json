@@ -22,7 +22,13 @@
     },
     {
       "emoji": "🎮",
-      "nom": "Jeux Vidéos & Gaming"
+      "nom": "Jeux Vidéos & Gaming",
+      "anecdotes": [
+        {
+          "titre": "The Legend Of Zelda: le héros principal",
+          "texte": "Le héros principal de la licence, ne s'appelle pas Zelda ! En effet, il se nomme link et Zelda et la princesse du royaume d'Hyrule."
+        }
+      ]
     }
   ]
 }
