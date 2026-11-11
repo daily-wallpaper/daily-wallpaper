@@ -6,7 +6,11 @@
       "questions": [
         {
           "question": "Quelle est la capitale de la France ?",
-          "reponses": ["Lyon", "Paris", "Marseille"],
+          "reponses": [
+            "Lyon",
+            "Paris",
+            "Marseille"
+          ],
           "bonne": 2
         }
       ]
@@ -17,10 +21,18 @@
       "questions": [
         {
           "question": "Quelle est la planète la plus proche du Soleil ?",
-          "reponses": ["Mercure", "Vénus", "Mars", "Jupiter"],
+          "reponses": [
+            "Mercure",
+            "Vénus",
+            "Mars",
+            "Jupiter"
+          ],
           "bonne": 1
         }
       ]
+    },
+    {
+      "nom": "Jeux Vidéos & Gaming"
     }
   ]
 }
