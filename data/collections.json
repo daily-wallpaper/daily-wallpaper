@@ -99,7 +99,13 @@
       "nom": "Jeux Vidéos & Gaming"
     },
     {
-      "nom": "Cyberpunk & Steampunk"
+      "nom": "Cyberpunk & Steampunk",
+      "wallpapers": [
+        {
+          "titre": "Bateau Steampunk",
+          "image": "/daily-wallpaper/media/ship-ruin-airships-steampunk-wallpaper-preview.jpg"
+        }
+      ]
     }
   ]
 }
