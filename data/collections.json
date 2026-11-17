@@ -54,7 +54,13 @@
     },
     {
       "emoji": "✈️",
-      "nom": "Avions & Armées"
+      "nom": "Avions & Armées",
+      "wallpapers": [
+        {
+          "titre": "Avion de chasse: F-16C",
+          "image": "/daily-wallpaper/media/image.jpeg"
+        }
+      ]
     },
     {
       "emoji": "🏛️",
