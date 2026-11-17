@@ -58,7 +58,13 @@
     },
     {
       "emoji": "🤖",
-      "nom": "Cyberpunk & Science-Fiction"
+      "nom": "Cyberpunk & Science-Fiction",
+      "wallpapers": [
+        {
+          "titre": "Steampunk: Bateau",
+          "image": "/daily-wallpaper/media/ship-ruin-airships-steampunk-wallpaper-preview.jpg"
+        }
+      ]
     },
     {
       "emoji": "🦊",
@@ -101,16 +107,6 @@
     {
       "emoji": "🎮",
       "nom": "Jeux Vidéos & Gaming"
-    },
-    {
-      "emoji": "🤖",
-      "nom": "Cyberpunk & Steampunk",
-      "wallpapers": [
-        {
-          "titre": "Bateau Steampunk",
-          "image": "/daily-wallpaper/media/ship-ruin-airships-steampunk-wallpaper-preview.jpg"
-        }
-      ]
     }
   ]
 }
