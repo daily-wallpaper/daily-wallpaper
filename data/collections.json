@@ -89,13 +89,17 @@
       "nom": "Noël et Haloween",
       "wallpapers": [
         {
-          "titre": "Haloween"
+          "titre": "Haloween",
+          "image": "/daily-wallpaper/media/halloween.jpeg"
         }
       ]
     },
     {
       "emoji": "🎮",
       "nom": "Jeux Vidéos & Gaming"
+    },
+    {
+      "nom": "Cyberpunk & Steampunk"
     }
   ]
 }
