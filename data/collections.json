@@ -44,7 +44,13 @@
     },
     {
       "emoji": "🎨",
-      "nom": "Art Abstrait & 3D"
+      "nom": "Art Abstrait & 3D",
+      "wallpapers": [
+        {
+          "titre": "Disques colorés",
+          "image": "/daily-wallpaper/media/WhatsApp Image 2026-11-17 at 18.42.54.jpeg"
+        }
+      ]
     },
     {
       "emoji": "✈️",
