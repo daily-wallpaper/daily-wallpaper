@@ -48,7 +48,19 @@
       ]
     },
     {
-      "nom": "Histoire"
+      "nom": "Histoire",
+      "questions": [
+        {
+          "question": "Au début du Moyen Âge, de quoi étaient souvent faits les premiers châteaux forts ?",
+          "reponses": [
+            "De marbre",
+            "De briques",
+            "De bois",
+            "De béton"
+          ],
+          "bonne": 3
+        }
+      ]
     }
   ]
 }
