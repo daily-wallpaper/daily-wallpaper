@@ -33,7 +33,18 @@
     },
     {
       "emoji": "🎮",
-      "nom": "Jeux Vidéos & Gaming"
+      "nom": "Jeux Vidéos & Gaming",
+      "questions": [
+        {
+          "question": "Dans la série The Legend of Zelda, comment s'appelle le héros que l'on incarne ?",
+          "reponses": [
+            "Link",
+            "Zelda",
+            "Ganon",
+            "Epona"
+          ]
+        }
+      ]
     }
   ]
 }
