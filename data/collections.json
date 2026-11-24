@@ -17,6 +17,10 @@
         {
           "titre": "Coucher de soleil ",
           "image": "/daily-wallpaper/media/SmartSelect_20261102_173808.jpg"
+        },
+        {
+          "titre": "Village au bord du lac",
+          "image": "/daily-wallpaper/media/WhatsApp Image 2026-11-04 at 13.25.23.jpeg"
         }
       ]
     },
@@ -26,25 +30,37 @@
       "wallpapers": [
         {
           "titre": "Terre",
-          "image": "/daily-wallpaper/media/space-1-1.jpg"
+          "image": "/daily-wallpaper/media/space-1.jpg"
         },
         {
           "titre": "Mars",
-          "image": "/daily-wallpaper/media/space-2-2.jpg"
+          "image": "/daily-wallpaper/media/space-2.jpg"
         },
         {
           "titre": "Supernova",
-          "image": "/daily-wallpaper/media/space-3-2.jpg"
+          "image": "/daily-wallpaper/media/space-3.jpg"
         }
       ]
     },
     {
       "emoji": "🎨",
-      "nom": "Art Abstrait & 3D"
+      "nom": "Art Abstrait & 3D",
+      "wallpapers": [
+        {
+          "titre": "Disques colorés",
+          "image": "/daily-wallpaper/media/WhatsApp Image 2026-11-17 at 18.42.54.jpeg"
+        }
+      ]
     },
     {
       "emoji": "✈️",
-      "nom": "Avions & Armées"
+      "nom": "Avions & Armées",
+      "wallpapers": [
+        {
+          "titre": "Avion de chasse: F-16C",
+          "image": "/daily-wallpaper/media/image.jpeg"
+        }
+      ]
     },
     {
       "emoji": "🏛️",
@@ -58,7 +74,13 @@
     },
     {
       "emoji": "🤖",
-      "nom": "Cyberpunk & Science-Fiction"
+      "nom": "Cyberpunk & Science-Fiction",
+      "wallpapers": [
+        {
+          "titre": "Steampunk: Bateau",
+          "image": "/daily-wallpaper/media/ship-ruin-airships-steampunk-wallpaper-preview.jpg"
+        }
+      ]
     },
     {
       "emoji": "🦊",
@@ -81,6 +103,10 @@
         {
           "titre": "HxH: Gon",
           "image": "/daily-wallpaper/media/hxh_Gon.jpg"
+        },
+        {
+          "titre": "HxH_Kiruha",
+          "image": "/daily-wallpaper/media/hxh_Kiruha.png"
         }
       ]
     },
@@ -90,7 +116,7 @@
       "wallpapers": [
         {
           "titre": "Haloween",
-          "image": "/daily-wallpaper/media/file_000000000d2481f48cb8dcac1e42e4f1-1.png"
+          "image": "/daily-wallpaper/media/halloween.jpeg"
         }
       ]
     },

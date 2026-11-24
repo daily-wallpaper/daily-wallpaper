@@ -6,7 +6,11 @@
       "questions": [
         {
           "question": "Quelle est la capitale de la France ?",
-          "reponses": ["Lyon", "Paris", "Marseille"],
+          "reponses": [
+            "Lyon",
+            "Paris",
+            "Marseille"
+          ],
           "bonne": 2
         }
       ]
@@ -17,8 +21,45 @@
       "questions": [
         {
           "question": "Quelle est la planète la plus proche du Soleil ?",
-          "reponses": ["Mercure", "Vénus", "Mars", "Jupiter"],
+          "reponses": [
+            "Mercure",
+            "Vénus",
+            "Mars",
+            "Jupiter"
+          ],
           "bonne": 1
+        }
+      ]
+    },
+    {
+      "emoji": "🎮",
+      "nom": "Jeux Vidéos & Gaming",
+      "questions": [
+        {
+          "question": "Dans la série The Legend of Zelda, comment s'appelle le héros que l'on incarne ?",
+          "reponses": [
+            "Link",
+            "Zelda",
+            "Ganon",
+            "Epona"
+          ],
+          "bonne": 1
+        }
+      ]
+    },
+    {
+      "emoji": "📜",
+      "nom": "Histoire",
+      "questions": [
+        {
+          "question": "Au début du Moyen Âge, de quoi étaient souvent faits les premiers châteaux forts ?",
+          "reponses": [
+            "De marbre",
+            "De briques",
+            "De bois",
+            "De béton"
+          ],
+          "bonne": 3
         }
       ]
     }
