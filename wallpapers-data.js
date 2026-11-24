@@ -111,6 +111,29 @@ visible: true
     image: "images/wallpapers/animaux/pygargue.jpeg",
     visible: true
   },
+{
+    collection: "science_fiction",
+    titre: "Ville Steampunk",
+    date: "7/11/2026",
+    image: "images/wallpapers/science_fiction/ville_steampunk.jpeg",
+    visible: true
+  },
+{
+    collection: "science_fiction",
+    titre: "Dirigeable Steampunk",
+    date: "7/11/2026",
+    image: "images/wallpapers/science_fiction/dirigeable.jpeg",
+    visible: true
+  },
+{
+    collection: "science_fiction",
+    titre: "Horloge Steampunk",
+    date: "7/11/2026",
+    image: "images/wallpapers/science_fiction/horloge_steampunk.jpeg",
+    visible: true
+  },
+
+
   {
     collection: "espace",
     titre: "Supernova",

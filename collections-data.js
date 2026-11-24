@@ -5,9 +5,9 @@
 
 const collections = [
   {
-    id: "cyperpunk",
+    id: "science_fiction",
     titre: "Cyberpunk & Science-Fiction",
-    description: "Plongez dans un univers futuriste saturé de néons et de hautes technologies.",
+    description: "Plongez dans des univers futuristes où technologies, inventions et mondes rétrofuturistes se rencontrent.",
     image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=600",
     visible: true
   },
