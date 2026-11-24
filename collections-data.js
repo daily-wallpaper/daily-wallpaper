@@ -8,7 +8,7 @@ const collections = [
     id: "science_fiction",
     titre: "Cyberpunk & Science-Fiction",
     description: "Plongez dans des univers futuristes où technologies, inventions et mondes rétrofuturistes se rencontrent.",
-    image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=600",
+    image: "images/wallpapers/science_fiction/ville_steampunk.jpeg",
     visible: true
   },
   {
