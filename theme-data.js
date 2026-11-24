@@ -1,6 +1,6 @@
 const theme = {
-  emoji: "✨",
+  emoji: "⚙️",
   titre: "Minimaliste",
-  image: "images/themes/minimaliste.jpeg",
-  legende: "Des lignes épurées, des couleurs douces et des compositions élégantes pour un univers apaisant et plein de simplicité ! "
+  image: "images/themes/steampunk.jpeg",
+  legende: "Découvrez un univers fascinant où les machines à vapeur, les engrenages et les inventions anciennes se rencontrent. "
 };
