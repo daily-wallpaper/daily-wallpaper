@@ -92,9 +92,9 @@
   // Remplit la section "Thème de la semaine" à partir de theme-data.js
   document.getElementById("theme-section").innerHTML = `
     <p class="theme-label">🔥 Le thème de la semaine</p>
-    <h2 class="theme-title">${theme.emoji} ${theme.titre}</h2>
-    <div class="theme-image-wrap">
-      <img src="${theme.image}" alt="${theme.titre}">
+    <h2 id="theme-title">${theme.emoji} ${theme.titre}</h2>
+    <div ip="theme-image-wrap">
+      <img id="${theme.image}" alt="${theme.titre}">
       <p class="theme-caption">${theme.legende}</p>
     </div>
   `;
